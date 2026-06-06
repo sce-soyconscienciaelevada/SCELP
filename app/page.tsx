@@ -1,721 +1,353 @@
-export default function IdentityAuditLP() {
+import BgCanvas from './components/BgCanvas';
+import Nav from './components/Nav';
+import PageAnimations from './components/PageAnimations';
+import Carousel from './components/Carousel';
+import FaqAccordion from './components/FaqAccordion';
+
+const WHOP_STANDARD = 'https://whop.com/soy-consciencia-elevada/identity-audit-protocol-cc/';
+const WHOP_VIP = 'https://whop.com/soy-consciencia-elevada/identity-integration-protocol-62/';
+
+const ArrowIcon = () => (
+  <svg className="arr" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M5 12h14M12 5l7 7-7 7" />
+  </svg>
+);
+
+export default function Page() {
   return (
-    <main
-      style={{
-        background: "var(--bg)",
-        color: "var(--fg)",
-        fontFamily: "var(--font-geist), system-ui, sans-serif",
-      }}
-    >
-      {/* ── HERO ───────────────────────────────────────────────────── */}
-      <section
-        style={{
-          minHeight: "100vh",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          padding: "7rem 2rem 5rem",
-          maxWidth: "740px",
-          margin: "0 auto",
-        }}
-      >
-        <p
-          style={{
-            fontFamily: "var(--font-geist), sans-serif",
-            fontSize: "0.75rem",
-            letterSpacing: "0.15em",
-            textTransform: "uppercase",
-            color: "var(--fg-muted)",
-            marginBottom: "3rem",
-          }}
-        >
-          Soy Consciencia Elevada
-        </p>
+    <>
+      <BgCanvas />
+      <PageAnimations />
+      <Nav />
 
-        <h1
-          style={{
-            fontFamily: "var(--font-inter), Inter, sans-serif",
-            fontSize: "clamp(2.6rem, 6vw, 5rem)",
-            fontWeight: 300,
-            lineHeight: 1.1,
-            letterSpacing: "0.02em",
-            color: "var(--fg)",
-            marginBottom: "2rem",
-          }}
-        >
-          You already know
-          <br />
-          what to do.
-          <br />
-          <span style={{ color: "var(--fg-secondary)" }}>
-            So why aren&apos;t you doing it?
-          </span>
-        </h1>
+      {/* ── HERO ──────────────────────────────────────────────── */}
+      <section id="hero-section">
+        <div className="hero-grid">
 
-        <p
-          style={{
-            fontSize: "1.05rem",
-            lineHeight: 1.75,
-            color: "var(--fg-secondary)",
-            maxWidth: "540px",
-            marginBottom: "3.5rem",
-          }}
-        >
-          The gap between knowing and executing is not a discipline problem.
-          <br />
-          It&apos;s an identity problem. And it has a name.
-        </p>
+          {/* Left: brand mark */}
+          <div className="hero-mark-wrap rv">
+            <div className="mark-diagram">
+              <div className="mark-glow" />
+              <div className="orbit orbit-1" />
+              <div className="orbit orbit-2" />
+              <div className="orbit orbit-3" />
+              <div className="mark-svg-wrap">
+                <svg viewBox="0 0 100 100" fill="none" width="96" height="96">
+                  <circle className="mark-circle" cx="50" cy="62" r="26" stroke="#9FC7BF" strokeWidth="2.8" />
+                  <line className="mark-line" x1="50" y1="36" x2="50" y2="8" stroke="#9FC7BF" strokeWidth="2.4" strokeLinecap="round" />
+                </svg>
+              </div>
+              <div className="data-pill dp-top" id="dp1">Identity</div>
+              <div className="data-pill dp-right" id="dp2">Mechanism</div>
+              <div className="data-pill dp-bottom" id="dp3">Execution</div>
+              <div className="data-pill dp-left" id="dp4">Audit</div>
+            </div>
+          </div>
 
-        <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-          <a
-            href="#pricing"
-            style={{
-              display: "inline-block",
-              background: "var(--fg)",
-              color: "var(--bg)",
-              padding: "0.85rem 2rem",
-              fontSize: "0.875rem",
-              fontWeight: 500,
-              letterSpacing: "0.05em",
-              textDecoration: "none",
-            }}
-          >
-            Begin Your Diagnostic — $37
-          </a>
+          {/* Right: copy */}
+          <div>
+            <div className="eyebrow eyebrow-left rv">Identity Audit Protocol</div>
+            <h1 className="hero-h1" id="hero-h1" />
+            <p className="hero-lead rv rv-d3">
+              20 structured questions. One personalized diagnostic report. The exact mechanism
+              driving your execution failures — identified, mapped, and linked to a clear direction.
+            </p>
+            <p className="hero-sub rv rv-d4">
+              30–40 minutes · Immediate access · Report delivered to your inbox
+            </p>
+            <div className="hero-actions rv rv-d5">
+              <a href={WHOP_STANDARD} className="btn btn-solid btn-lg" target="_blank" rel="noopener noreferrer">
+                <span>Begin Assessment — $37</span>
+                <ArrowIcon />
+              </a>
+              <a href="#howitworks" className="btn btn-lg">
+                <span>How it works</span>
+              </a>
+            </div>
+            <div className="hero-stats rv rv-d6">
+              <div>
+                <span className="stat-num"><span data-count="20">0</span></span>
+                <span className="stat-lbl">Questions</span>
+              </div>
+              <div>
+                <span className="stat-num"><span data-count="7">0</span></span>
+                <span className="stat-lbl">Sections</span>
+              </div>
+              <div>
+                <span className="stat-num">5</span>
+                <span className="stat-lbl">Report outputs</span>
+              </div>
+              <div>
+                <span className="stat-num">$37</span>
+                <span className="stat-lbl">One-time</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
-      <Divider />
-
-      {/* ── SECTION 1 — THE PROBLEM ───────────────────────────────── */}
-      <Section>
-        <SectionLabel>The Problem</SectionLabel>
-        <BodyBlock>
-          <p>Most people trying to improve their lives are solving the wrong problem.</p>
-          <p>
-            They add more habits.<br />More systems.<br />More information.<br />More tools.
-          </p>
-          <p>And the same loops come back.</p>
-          <p>
-            Because the problem is not what you&apos;re doing.<br />
-            It&apos;s who you believe yourself to be when you do it.
-          </p>
-        </BodyBlock>
-      </Section>
-
-      <Divider />
-
-      {/* ── SECTION 2 — WHAT THIS IS ──────────────────────────────── */}
-      <Section>
-        <SectionLabel>What This Is</SectionLabel>
-        <h2
-          style={{
-            fontFamily: "var(--font-inter), Inter, sans-serif",
-            fontSize: "clamp(1.6rem, 3.5vw, 2.5rem)",
-            fontWeight: 300,
-            lineHeight: 1.2,
-            color: "var(--fg)",
-            marginBottom: "2rem",
-            letterSpacing: "0.02em",
-          }}
-        >
-          The Identity Audit Protocol:<br />Execution Diagnostic
-        </h2>
-        <BodyBlock>
-          <p>A 21-question assessment.</p>
-          <p>
-            It does not motivate you.<br />
-            It does not give you a plan.<br />
-            It does not tell you what to do.
-          </p>
-          <p>
-            It identifies the specific execution mechanism running underneath
-            your behavior — beneath your goals, your intentions, and your effort.
-          </p>
-          <p>
-            It takes 30–40 minutes.<br />
-            It requires honesty, not performance.
-          </p>
-        </BodyBlock>
-
-        <div
-          style={{
-            marginTop: "2.5rem",
-            padding: "2rem",
-            background: "var(--bg-card)",
-            borderLeft: "2px solid var(--accent)",
-          }}
-        >
-          <p
-            style={{
-              fontSize: "0.7rem",
-              letterSpacing: "0.12em",
-              textTransform: "uppercase",
-              color: "var(--fg-muted)",
-              marginBottom: "1.25rem",
-            }}
-          >
-            Your report includes
-          </p>
-          <ul
-            style={{
-              listStyle: "none",
-              padding: 0,
-              margin: 0,
-              display: "flex",
-              flexDirection: "column",
-              gap: "0.75rem",
-            }}
-          >
+      {/* ── FOR WHO ───────────────────────────────────────────── */}
+      <section id="forwho" className="scan">
+        <div className="wrap">
+          <div className="forwho-intro">
+            <div className="eyebrow rv">Who this is for</div>
+            <h2 className="sec-title rv rv-d1">This is not a motivation tool.</h2>
+            <p className="sec-sub rv rv-d2" style={{ margin: '0 auto' }}>
+              This assessment was built for a specific type of person: someone who already knows
+              what they need to do — and consistently doesn&apos;t do it. Not because of laziness.
+              Not because of a lack of information.
+            </p>
+          </div>
+          <div className="forwho-items">
             {[
-              "Your execution mechanism (named specifically — not a generic type)",
-              "The identity conflict at its root",
-              "One non-negotiable change",
-              "A realistic timeline",
-              "The most aligned next step for your specific situation",
-            ].map((item) => (
-              <li
-                key={item}
-                style={{
-                  display: "flex",
-                  alignItems: "flex-start",
-                  gap: "0.75rem",
-                  fontSize: "0.925rem",
-                  lineHeight: 1.6,
-                  color: "var(--fg-secondary)",
-                }}
-              >
-                <span style={{ color: "var(--accent)", marginTop: "0.1rem", flexShrink: 0 }}>—</span>
-                {item}
-              </li>
+              { n: '01', strong: 'You start things with clarity and abandon them before completion', rest: ' — not once, but in a recognizable pattern.' },
+              { n: '02', strong: 'You keep breaking commitments to yourself.', rest: ' Not to others — you\'re reliable there. To yourself, specifically.' },
+              { n: '03', strong: 'You\'ve done the inner work.', rest: ' Read the books. You understand the psychology. You still don\'t move.' },
+              { n: '04', strong: 'You can explain exactly why you\'re stuck', rest: ' — but explaining it doesn\'t change it.' },
+            ].map((item, i) => (
+              <div key={i} className={`fw-item rv rv-d${i + 1}`}>
+                <div className="fw-num">{item.n}</div>
+                <div className="fw-text">
+                  <strong>{item.strong}</strong>{item.rest}
+                </div>
+              </div>
             ))}
-          </ul>
-        </div>
-      </Section>
-
-      <Divider />
-
-      {/* ── SECTION 3 — WHO THIS IS FOR ───────────────────────────── */}
-      <Section>
-        <SectionLabel>Who This Is For</SectionLabel>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-            gap: "2.5rem",
-            marginTop: "0.5rem",
-          }}
-        >
-          <div>
-            <p
-              style={{
-                fontSize: "0.7rem",
-                letterSpacing: "0.12em",
-                textTransform: "uppercase",
-                color: "var(--fg-muted)",
-                marginBottom: "1.25rem",
-              }}
-            >
-              This is for you if
-            </p>
-            <ul
-              style={{
-                listStyle: "none",
-                padding: 0,
-                margin: 0,
-                display: "flex",
-                flexDirection: "column",
-                gap: "1rem",
-              }}
-            >
-              {[
-                "You know what to do but don't consistently do it",
-                "You've started things that matter and abandoned them",
-                "The same problems keep showing up no matter how much you \"work on yourself\"",
-                "You're tired of adding more — you want to remove what's blocking you",
-                "You're willing to look directly at what's stopping you",
-              ].map((item) => (
-                <li
-                  key={item}
-                  style={{
-                    display: "flex",
-                    gap: "0.75rem",
-                    fontSize: "0.9rem",
-                    lineHeight: 1.65,
-                    color: "var(--fg-secondary)",
-                  }}
-                >
-                  <span style={{ color: "var(--fg)", opacity: 0.4, flexShrink: 0 }}>—</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
           </div>
-
-          <div>
-            <p
-              style={{
-                fontSize: "0.7rem",
-                letterSpacing: "0.12em",
-                textTransform: "uppercase",
-                color: "var(--fg-muted)",
-                marginBottom: "1.25rem",
-              }}
-            >
-              This is NOT for you if
-            </p>
-            <ul
-              style={{
-                listStyle: "none",
-                padding: 0,
-                margin: 0,
-                display: "flex",
-                flexDirection: "column",
-                gap: "1rem",
-              }}
-            >
-              {[
-                "You want quick fixes",
-                "You're not willing to answer honestly",
-                "You're looking for motivation",
-              ].map((item) => (
-                <li
-                  key={item}
-                  style={{
-                    display: "flex",
-                    gap: "0.75rem",
-                    fontSize: "0.9rem",
-                    lineHeight: 1.65,
-                    color: "var(--fg-muted)",
-                  }}
-                >
-                  <span style={{ flexShrink: 0, opacity: 0.5 }}>×</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
+          <div className="fw-close rv rv-d5">
+            If the problem were information, you would have fixed it years ago. The problem is
+            identity. This assessment finds the specific conflict.{' '}
+            <strong>
+              Every month that passes without identifying the mechanism is another month executing
+              against yourself.
+            </strong>{' '}
+            The loop doesn&apos;t resolve on its own.
           </div>
         </div>
-      </Section>
+      </section>
 
-      <Divider />
-
-      {/* ── SECTION 4 — PRICING ───────────────────────────────────── */}
-      <section
-        id="pricing"
-        style={{
-          maxWidth: "740px",
-          margin: "0 auto",
-          padding: "5rem 2rem",
-        }}
-      >
-        <SectionLabel>Choose Your Access</SectionLabel>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-            gap: "1.5rem",
-            marginTop: "1rem",
-          }}
-        >
-          {/* Standard card */}
-          <div
-            style={{
-              background: "var(--bg-card)",
-              border: "1px solid var(--border)",
-              padding: "2.25rem",
-              display: "flex",
-              flexDirection: "column",
-              gap: "1.5rem",
-            }}
-          >
-            <div>
-              <p
-                style={{
-                  fontSize: "0.7rem",
-                  letterSpacing: "0.15em",
-                  textTransform: "uppercase",
-                  color: "var(--fg-muted)",
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Standard
-              </p>
-              <p
-                style={{
-                  fontFamily: "var(--font-inter), Inter, sans-serif",
-                  fontSize: "3.25rem",
-                  fontWeight: 300,
-                  lineHeight: 1,
-                  color: "var(--fg)",
-                }}
-              >
-                $37
-              </p>
-            </div>
-            <div style={{ height: "1px", background: "var(--border)" }} />
-            <ul
-              style={{
-                listStyle: "none",
-                padding: 0,
-                margin: 0,
-                display: "flex",
-                flexDirection: "column",
-                gap: "0.75rem",
-                flex: 1,
-              }}
-            >
-              {[
-                "Complete the 21-question assessment",
-                "Personalized report delivered by email",
-                "Received within minutes of completion",
-              ].map((item) => (
-                <li
-                  key={item}
-                  style={{
-                    display: "flex",
-                    gap: "0.75rem",
-                    fontSize: "0.875rem",
-                    lineHeight: 1.6,
-                    color: "var(--fg-secondary)",
-                  }}
-                >
-                  <span style={{ color: "var(--accent)", flexShrink: 0 }}>—</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <a
-              href="https://whop.com/soy-consciencia-elevada/identity-audit-protocol-cc/"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: "block",
-                textAlign: "center",
-                border: "1px solid var(--border)",
-                color: "var(--fg-secondary)",
-                padding: "0.85rem 1.5rem",
-                fontSize: "0.825rem",
-                letterSpacing: "0.05em",
-                textDecoration: "none",
-              }}
-            >
-              Begin Assessment — $37
-            </a>
+      {/* ── HOW IT WORKS ──────────────────────────────────────── */}
+      <section id="howitworks" className="scan">
+        <div className="wrap">
+          <div className="section-header">
+            <div className="eyebrow rv">The process</div>
+            <h2 className="sec-title rv rv-d1">Three steps. No fluff.</h2>
           </div>
-
-          {/* VIP card */}
-          <div
-            style={{
-              background: "var(--bg-card-highlight)",
-              border: "1px solid var(--accent)",
-              padding: "2.25rem",
-              display: "flex",
-              flexDirection: "column",
-              gap: "1.5rem",
-              position: "relative",
-            }}
-          >
-            <div
-              style={{
-                position: "absolute",
-                top: 0,
-                left: "2.25rem",
-                right: "2.25rem",
-                height: "2px",
-                background: "var(--accent)",
-              }}
-            />
-            <div>
-              <p
-                style={{
-                  fontSize: "0.7rem",
-                  letterSpacing: "0.15em",
-                  textTransform: "uppercase",
-                  color: "var(--accent)",
-                  marginBottom: "0.5rem",
-                }}
-              >
-                VIP
-              </p>
-              <p
-                style={{
-                  fontFamily: "var(--font-inter), Inter, sans-serif",
-                  fontSize: "3.25rem",
-                  fontWeight: 300,
-                  lineHeight: 1,
-                  color: "var(--fg)",
-                }}
-              >
-                $97
-              </p>
+          <div className="process-card rv rv-d2">
+            <div className="process-steps">
+              {[
+                { n: '01', title: 'Complete 20 questions', desc: 'Across 7 sections targeting different layers: where you\'re stuck, how you stop yourself, the identity underneath, your body\'s signal, what you already know.', tag: '30–40 minutes' },
+                { n: '02', title: 'Receive your report', desc: 'Built from your specific responses. Delivered to your inbox immediately. Identifies the execution mechanism, root identity conflict, and one non-negotiable change.', tag: 'Immediate delivery' },
+                { n: '03', title: 'VIP: Integration session', desc: 'A 15-minute recorded session that translates your results into daily behavior — what your mechanism looks like in real life, and what the identity shift requires.', tag: 'VIP only' },
+              ].map((step) => (
+                <div key={step.n} className="proc">
+                  <div className="proc-ring"><span className="proc-n">{step.n}</span></div>
+                  <div className="proc-title">{step.title}</div>
+                  <div className="proc-desc">{step.desc}</div>
+                  <div className="proc-tag">{step.tag}</div>
+                </div>
+              ))}
             </div>
-            <div style={{ height: "1px", background: "var(--border)" }} />
-            <div style={{ flex: 1 }}>
-              <p
-                style={{
-                  fontSize: "0.85rem",
-                  color: "var(--fg-secondary)",
-                  lineHeight: 1.65,
-                  marginBottom: "1.25rem",
-                }}
-              >
-                Everything in Standard, plus the{" "}
-                <em>Identity Integration Protocol</em> — a 15-minute guided
-                session delivered after your report.
-              </p>
-              <ul
-                style={{
-                  listStyle: "none",
-                  padding: 0,
-                  margin: 0,
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "0.65rem",
-                }}
-              >
-                {[
-                  "Why reading a diagnosis rarely produces change",
-                  "How to locate the exact moment your mechanism activates",
-                  "The one internal shift required before any external action works",
-                  "How to interrupt the loop when it fires — in real time",
-                  "What the next 7 days look like for your specific execution type",
-                  "The difference between understanding and dissolving your mechanism",
-                  "One concrete action that proves the new direction to yourself",
-                ].map((item) => (
-                  <li
-                    key={item}
-                    style={{
-                      display: "flex",
-                      gap: "0.65rem",
-                      fontSize: "0.825rem",
-                      lineHeight: 1.55,
-                      color: "var(--fg-secondary)",
-                    }}
-                  >
-                    <span style={{ color: "var(--accent)", flexShrink: 0 }}>—</span>
-                    {item}
+          </div>
+        </div>
+      </section>
+
+      {/* ── REPORT OUTPUT ─────────────────────────────────────── */}
+      <section id="report" className="scan">
+        <div className="wrap">
+          <div className="section-header">
+            <div className="eyebrow rv">Report output</div>
+            <h2 className="sec-title rv rv-d1">Five outputs. Each specific to your answers.</h2>
+            <p className="sec-sub rv rv-d2" style={{ margin: '0 auto' }}>
+              Not generic advice. Not a personality type. A diagnostic built from your specific responses.
+            </p>
+          </div>
+          <div className="report-table" style={{ marginTop: '48px' }}>
+            {[
+              { n: '01', name: 'The Mechanism', desc: 'The specific execution mechanism your answers reveal. Named so you can recognize it when it activates.' },
+              { n: '02', name: 'The Root', desc: 'The identity conflict at the root. What self-concept is in tension with what you say you want.' },
+              { n: '03', name: 'Execution Failure Type', desc: 'The exact way you interrupt yourself. Procrastination, over-preparation, visibility avoidance, re-starting.' },
+              { n: '04', name: 'One Non-Negotiable Change', desc: 'Not a list. One specific, concrete change that operates at the identity level. Timeline: 14, 30, 60, or 90 days.' },
+              { n: '05', name: 'Your Next Step', desc: 'Based on your answers, the clearest direction for your next move — structural, behavioral, or identity-level.' },
+            ].map((row, i) => (
+              <div key={row.n} className={`rpt-row rv rv-d${i + 1}`}>
+                <div className="rpt-index">
+                  <span className="rpt-n">{row.n}</span>
+                  <span className="rpt-name">{row.name}</span>
+                </div>
+                <div className="rpt-desc">{row.desc}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── TESTIMONIALS ──────────────────────────────────────── */}
+      <section id="testimonials" className="scan">
+        <div className="wrap-sm">
+          <div className="section-header">
+            <div className="eyebrow rv">What people found</div>
+            <h2 className="sec-title rv rv-d1">The result isn&apos;t a category. It&apos;s a mirror.</h2>
+          </div>
+          <Carousel />
+        </div>
+      </section>
+
+      {/* ── PRICING ───────────────────────────────────────────── */}
+      <section id="pricing" className="scan">
+        <div className="wrap">
+          <div className="section-header">
+            <div className="eyebrow rv">Choose your access level</div>
+            <h2 className="sec-title rv rv-d1">Same diagnostic engine. Two delivery options.</h2>
+            <p className="sec-sub rv rv-d2" style={{ margin: '0 auto' }}>
+              Both start with the same 20 questions and deliver the same personalized report.
+              The difference is what happens after you read it.
+            </p>
+          </div>
+          <div className="pricing-grid" style={{ marginTop: '56px' }}>
+            {/* Standard */}
+            <div className="pkg rv rv-d1">
+              <div className="pkg-tier">Standard</div>
+              <div className="pkg-name">Diagnostic Report</div>
+              <div className="pkg-tagline">The assessment and your full personalized report.</div>
+              <div className="pkg-price">$37</div>
+              <div className="pkg-price-note">USD · One-time · Immediate access</div>
+              <a href={WHOP_STANDARD} className="btn btn-lg pkg-cta" target="_blank" rel="noopener noreferrer">
+                <span>Begin Assessment</span>
+                <ArrowIcon />
+              </a>
+              <hr className="pkg-hr" />
+              <ul className="pkg-features">
+                {['Complete the 20-question assessment', 'Personalized diagnostic report', 'Identified mechanism, root conflict, failure type', 'One Non-Negotiable Change', 'Timeline recommendation'].map((f) => (
+                  <li key={f} className="pkg-feat">
+                    <span className="feat-check">✓</span>{f}
                   </li>
                 ))}
               </ul>
-              <p
-                style={{
-                  fontSize: "0.75rem",
-                  color: "var(--fg-muted)",
-                  marginTop: "1.25rem",
-                  lineHeight: 1.55,
-                }}
-              >
-                No live call. Delivered by email link immediately after purchase.
-              </p>
+              <div className="pkg-upgrade">
+                <div className="pkg-upgrade-label">Want diagnosis + integration?</div>
+                <a href={WHOP_VIP} className="pkg-upgrade-link" target="_blank" rel="noopener noreferrer">
+                  Upgrade to VIP — $97
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
             </div>
-            <a
-              href="https://whop.com/soy-consciencia-elevada/identity-integration-protocol-62/"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: "block",
-                textAlign: "center",
-                background: "var(--fg)",
-                color: "var(--bg)",
-                padding: "0.85rem 1.5rem",
-                fontSize: "0.825rem",
-                fontWeight: 500,
-                letterSpacing: "0.05em",
-                textDecoration: "none",
-              }}
-            >
-              VIP Access — $97
-            </a>
+
+            {/* VIP */}
+            <div className="pkg featured rv rv-d2">
+              <div className="pkg-badge">Most complete</div>
+              <div className="pkg-tier">VIP</div>
+              <div className="pkg-name">Diagnosis + Integration</div>
+              <div className="pkg-tagline">The report plus a recorded session that tells you what to do with it.</div>
+              <div className="pkg-price">$97</div>
+              <div className="pkg-price-note">USD · One-time · Immediate access</div>
+              <a href={WHOP_VIP} className="btn btn-solid btn-lg pkg-cta" target="_blank" rel="noopener noreferrer">
+                <span>VIP Access</span>
+                <ArrowIcon />
+              </a>
+              <hr className="pkg-hr" />
+              <ul className="pkg-features">
+                {['Everything in Standard', 'Identity Integration Protocol — 15-min recorded session', 'What your mechanism looks like in real daily behavior', 'What the identity shift actually requires', 'How to use your One Non-Negotiable Change as a starting point'].map((f) => (
+                  <li key={f} className="pkg-feat">
+                    <span className="feat-check">✓</span>{f}
+                  </li>
+                ))}
+              </ul>
+              <div className="pkg-insight">
+                The diagnosis tells you what.<br />The session tells you what to do with it.
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <Divider />
-
-      {/* ── SECTION 5 — GUARANTEE ─────────────────────────────────── */}
-      <Section>
-        <SectionLabel>The Guarantee</SectionLabel>
-        <BodyBlock>
-          <p>Complete the full assessment honestly.</p>
-          <p>
-            If your report does not give you one clear, actionable insight about
-            what is blocking your execution — we return your money. No questions.
-          </p>
-        </BodyBlock>
-      </Section>
-
-      <Divider />
-
-      {/* ── SECTION 6 — WHAT THIS IS NOT ─────────────────────────── */}
-      <Section>
-        <SectionLabel>What This Is Not</SectionLabel>
-        <BodyBlock>
-          <p>
-            This is not a personality test.<br />
-            This is not therapy.<br />
-            This is not a quiz.<br />
-            This is not a 2-minute &quot;find your type&quot; exercise.
-          </p>
-          <p>
-            It requires your attention and your honesty.
-            <br />
-            That is the price of real clarity.
-          </p>
-        </BodyBlock>
-      </Section>
-
-      <Divider />
-
-      {/* ── SECTION 7 — CONTROLLED FRICTION + FINAL CTA ──────────── */}
-      <Section>
-        <SectionLabel>Before You Begin</SectionLabel>
-        <BodyBlock>
-          <p>This takes 30–40 minutes.</p>
-          <p>
-            Do not start if you are in a hurry.<br />
-            Do not start if you plan to skim.
-          </p>
-          <p>
-            The assessment only works if you answer from experience,
-            not from how you want to appear.
-          </p>
-          <p>If that is something you are willing to do:</p>
-        </BodyBlock>
-
-        <div
-          style={{
-            marginTop: "2.5rem",
-            display: "flex",
-            gap: "1rem",
-            flexWrap: "wrap",
-          }}
-        >
-          <a
-            href="https://whop.com/soy-consciencia-elevada/identity-audit-protocol-cc/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: "inline-block",
-              background: "var(--fg)",
-              color: "var(--bg)",
-              padding: "0.9rem 2.25rem",
-              fontSize: "0.875rem",
-              fontWeight: 500,
-              letterSpacing: "0.05em",
-              textDecoration: "none",
-            }}
-          >
-            Begin Your Assessment — $37
-          </a>
-          <a
-            href="https://whop.com/soy-consciencia-elevada/identity-integration-protocol-62/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: "inline-block",
-              border: "1px solid var(--accent)",
-              color: "var(--accent)",
-              padding: "0.9rem 2.25rem",
-              fontSize: "0.875rem",
-              letterSpacing: "0.05em",
-              textDecoration: "none",
-            }}
-          >
-            VIP Access — $97
-          </a>
+      {/* ── GUARANTEE ─────────────────────────────────────────── */}
+      <section id="guarantee" className="scan">
+        <div className="wrap-sm">
+          <div className="guarantee-card rv rv-d1">
+            <div className="guarantee-icon">↩</div>
+            <div className="eyebrow" style={{ justifyContent: 'center', marginBottom: '14px' }}>
+              The Guarantee
+            </div>
+            <div className="guarantee-h">
+              Complete it honestly. If it doesn&apos;t name something real — full refund.
+            </div>
+            <div className="guarantee-body">
+              Complete the full 20-question assessment and if the report doesn&apos;t give you one
+              specific insight you recognize as true about what is blocking your execution — email us
+              within 7 days.{' '}
+              <strong>Full refund. No form to fill out, no questions asked.</strong>
+              <br /><br />
+              This works because the questions are designed to surface what&apos;s already there. If
+              you answer honestly, the output is accurate.
+            </div>
+          </div>
         </div>
-      </Section>
+      </section>
 
-      {/* ── FOOTER ────────────────────────────────────────────────── */}
-      <footer
-        style={{
-          borderTop: "1px solid var(--border)",
-          padding: "3rem 2rem",
-          maxWidth: "740px",
-          margin: "0 auto",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          flexWrap: "wrap",
-          gap: "1rem",
-        }}
-      >
-        <p
-          style={{
-            fontSize: "0.7rem",
-            letterSpacing: "0.12em",
-            textTransform: "uppercase",
-            color: "var(--fg-muted)",
-          }}
-        >
-          SCE — Soy Consciencia Elevada
-        </p>
-        <p
-          style={{
-            fontSize: "0.7rem",
-            color: "var(--fg-muted)",
-            maxWidth: "380px",
-            textAlign: "right",
-            lineHeight: 1.6,
-          }}
-        >
-          This is a structured self-diagnostic tool.
-          It is not a clinical or psychological assessment.
-        </p>
+      {/* ── FAQ ───────────────────────────────────────────────── */}
+      <section id="faq" className="scan">
+        <div className="wrap-sm">
+          <div className="section-header">
+            <div className="eyebrow rv">FAQ</div>
+            <h2 className="sec-title rv rv-d1">Common questions</h2>
+          </div>
+          <FaqAccordion />
+        </div>
+      </section>
+
+      {/* ── FINAL CTA ─────────────────────────────────────────── */}
+      <section id="cta">
+        <div className="cta-glow" />
+        <div className="cta-inner">
+          <div className="eyebrow rv" style={{ justifyContent: 'center', marginBottom: '22px' }}>
+            SCE
+          </div>
+          <h2 className="cta-title rv rv-d1">
+            We do not teach you what to do.
+            <br />
+            <em>We remove what prevents you from becoming someone who does it.</em>
+          </h2>
+          <p className="cta-sub rv rv-d2">
+            The assessment is the first step. 30 minutes. $37. Full refund if it doesn&apos;t name
+            something real.
+          </p>
+          <div className="cta-actions rv rv-d3">
+            <a href={WHOP_STANDARD} className="btn btn-lg" target="_blank" rel="noopener noreferrer">
+              <span>Standard — $37</span>
+              <ArrowIcon />
+            </a>
+            <a href={WHOP_VIP} className="btn btn-solid btn-lg" target="_blank" rel="noopener noreferrer">
+              <span>VIP — $97</span>
+              <ArrowIcon />
+            </a>
+          </div>
+          <div className="cta-note rv rv-d4">
+            Risk-free · 7-day full refund · No form · No questions asked
+          </div>
+        </div>
+      </section>
+
+      {/* ── FOOTER ────────────────────────────────────────────── */}
+      <footer>
+        <div className="footer-in">
+          <div className="footer-logo">
+            <svg width="18" height="18" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+              <circle cx="50" cy="62" r="26" stroke="#9FC7BF" strokeWidth="3" opacity="0.6" />
+              <line x1="50" y1="36" x2="50" y2="8" stroke="#9FC7BF" strokeWidth="2.5" strokeLinecap="round" opacity="0.6" />
+            </svg>
+            SCE
+          </div>
+          <div className="footer-copy">
+            © 2026 Soy Consciencia Elevada · soyconscienciaelevada@gmail.com
+          </div>
+          <div className="footer-disc">
+            This is a structured self-diagnostic tool. It is not a clinical or psychological assessment.
+          </div>
+        </div>
       </footer>
-    </main>
-  );
-}
-
-function Divider() {
-  return (
-    <div style={{ maxWidth: "740px", margin: "0 auto", padding: "0 2rem" }}>
-      <div style={{ height: "1px", background: "var(--border)" }} />
-    </div>
-  );
-}
-
-function Section({ children }: { children: React.ReactNode }) {
-  return (
-    <section
-      style={{ maxWidth: "740px", margin: "0 auto", padding: "5rem 2rem" }}
-    >
-      {children}
-    </section>
-  );
-}
-
-function SectionLabel({ children }: { children: React.ReactNode }) {
-  return (
-    <p
-      style={{
-        fontSize: "0.7rem",
-        letterSpacing: "0.18em",
-        textTransform: "uppercase",
-        color: "var(--fg-muted)",
-        marginBottom: "2rem",
-      }}
-    >
-      {children}
-    </p>
-  );
-}
-
-function BodyBlock({ children }: { children: React.ReactNode }) {
-  return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        gap: "1.25rem",
-        fontSize: "1rem",
-        lineHeight: 1.8,
-        color: "var(--fg-secondary)",
-        maxWidth: "560px",
-      }}
-    >
-      {children}
-    </div>
+    </>
   );
 }
