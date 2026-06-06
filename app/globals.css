@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+/* ── SCE DESIGN TOKENS ─────────────────────────────────────────────
+   Source: VISUAL_STYLE_SYSTEM.md
+   Background never pure white. Accent = muted teal. Font = Inter.
+─────────────────────────────────────────────────────────────────── */
+:root {
+  --bg:               #EFF6F4;
+  --bg-card:          #F5F8F7;
+  --bg-card-highlight:#EAF0EE;
+  --fg:               #2F3A38;
+  --fg-secondary:     #5A6B68;
+  --fg-muted:         #9EB0AD;
+  --border:           rgba(47, 58, 56, 0.10);
+  --border-subtle:    rgba(47, 58, 56, 0.06);
+  --accent:           #9FC7BF;
+  --accent-soft:      rgba(159, 199, 191, 0.15);
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--fg);
+  --font-sans: var(--font-inter);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+  color: var(--fg);
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-inter), Inter, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
