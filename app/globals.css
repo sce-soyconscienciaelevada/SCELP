@@ -239,8 +239,7 @@ section { position: relative; z-index: 2; }
 }
 .mark-diagram { position: relative; width: 340px; height: 340px; }
 .mark-svg-wrap {
-  position: absolute; top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
+  position: absolute; inset: 0; margin: auto;
   width: 96px; height: 96px;
 }
 .mark-circle {
@@ -255,27 +254,25 @@ section { position: relative; z-index: 2; }
 @keyframes drawLine { from { stroke-dashoffset: 28; opacity: 0; } to { stroke-dashoffset: 0; opacity: .85; } }
 
 .mark-glow {
-  position: absolute; top: 50%; left: 50%;
-  transform: translate(-50%,-50%);
+  position: absolute; inset: 0; margin: auto;
   width: 240px; height: 240px; border-radius: 50%;
   background: radial-gradient(ellipse, rgba(159,199,191,.18), transparent 70%);
   animation: glowPulse 6s ease-in-out infinite;
 }
 @keyframes glowPulse {
-  0%,100% { opacity: .55; transform: translate(-50%,-50%) scale(1); }
-  50%      { opacity: 1;   transform: translate(-50%,-50%) scale(1.1); }
+  0%,100% { opacity: .55; transform: scale(1); }
+  50%      { opacity: 1;   transform: scale(1.1); }
 }
 .orbit {
-  position: absolute; top: 50%; left: 50%; border-radius: 50%;
+  position: absolute; inset: 0; margin: auto; border-radius: 50%;
   border: 1px dashed rgba(159,199,191,.13);
-  transform: translate(-50%,-50%);
 }
 .orbit-1 { width: 154px; height: 154px; animation: spin 28s linear infinite; }
 .orbit-2 { width: 234px; height: 234px; animation: spin 45s linear infinite reverse; border-style: dotted; border-color: rgba(159,199,191,.08); }
 .orbit-3 { width: 318px; height: 318px; animation: spin 70s linear infinite; border-color: rgba(159,199,191,.04); }
 @keyframes spin {
-  from { transform: translate(-50%,-50%) rotate(0deg); }
-  to   { transform: translate(-50%,-50%) rotate(360deg); }
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 
 .data-pill {
