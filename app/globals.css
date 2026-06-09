@@ -273,7 +273,10 @@ section { position: relative; z-index: 2; }
 .orbit-1 { width: 154px; height: 154px; animation: spin 28s linear infinite; }
 .orbit-2 { width: 234px; height: 234px; animation: spin 45s linear infinite reverse; border-style: dotted; border-color: rgba(159,199,191,.08); }
 .orbit-3 { width: 318px; height: 318px; animation: spin 70s linear infinite; border-color: rgba(159,199,191,.04); }
-@keyframes spin { to { transform: translate(-50%,-50%) rotate(360deg); } }
+@keyframes spin {
+  from { transform: translate(-50%,-50%) rotate(0deg); }
+  to   { transform: translate(-50%,-50%) rotate(360deg); }
+}
 
 .data-pill {
   position: absolute; white-space: nowrap;
@@ -433,7 +436,7 @@ section { position: relative; z-index: 2; }
 .pkg-tagline { font-size: 12px; color: var(--soft); line-height: 1.55; margin-bottom: 22px; }
 .pkg-price { font-family: var(--serif); font-size: 48px; font-weight: 400; color: var(--acc); letter-spacing: -1px; line-height: 1; margin-bottom: 4px; }
 .pkg-price-note { font-size: 11px; color: var(--soft); margin-bottom: 22px; }
-.pkg-cta { display: block; text-align: center; width: 100%; margin-bottom: 24px; }
+.pkg-cta { display: flex; align-items: center; justify-content: center; width: 100%; margin-bottom: 24px; }
 .pkg-hr { border: none; border-top: 1px solid var(--brd); margin: 20px 0; }
 .pkg-features { list-style: none; display: flex; flex-direction: column; gap: 9px; }
 .pkg-feat { display: flex; align-items: flex-start; gap: 9px; font-size: 12px; color: var(--soft); line-height: 1.5; }
