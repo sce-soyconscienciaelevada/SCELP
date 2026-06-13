@@ -32,7 +32,7 @@
   --brd-s: rgba(27,35,32,.16);
   --nav-blur-bg: rgba(239,246,244,.94);
 }
-[data-theme="light"] #bg-canvas { filter: grayscale(1) invert(1); opacity: .04; }
+[data-theme="light"] #bg-canvas { opacity: .55; }
 [data-theme="light"] #hero-section::after { opacity: .15; }
 [data-theme="light"] .scan::before {
   background: linear-gradient(90deg, transparent, rgba(47,58,56,.4), transparent);

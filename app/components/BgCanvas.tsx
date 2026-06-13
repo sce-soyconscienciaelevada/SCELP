@@ -33,6 +33,10 @@ export default function BgCanvas() {
 
     function draw() {
       ctx.clearRect(0, 0, W, H);
+      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+      const dotColor = isLight ? 'rgba(47,107,98,.32)' : 'rgba(159,199,191,.25)';
+      const lineRGB  = isLight ? '47,107,98' : '159,199,191';
+      const lineAlpha = isLight ? 0.13 : 0.07;
       pts.forEach((p) => {
         p.x += p.vx;
         p.y += p.vy;
@@ -42,7 +46,7 @@ export default function BgCanvas() {
         if (p.y > H) p.y = 0;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(159,199,191,.25)';
+        ctx.fillStyle = dotColor;
         ctx.fill();
       });
       for (let i = 0; i < pts.length; i++) {
@@ -54,7 +58,7 @@ export default function BgCanvas() {
             ctx.beginPath();
             ctx.moveTo(pts[i].x, pts[i].y);
             ctx.lineTo(pts[j].x, pts[j].y);
-            ctx.strokeStyle = `rgba(159,199,191,${(1 - d / 120) * 0.07})`;
+            ctx.strokeStyle = `rgba(${lineRGB},${(1 - d / 120) * lineAlpha})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
