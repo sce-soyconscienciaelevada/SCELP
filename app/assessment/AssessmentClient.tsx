@@ -23,177 +23,177 @@ interface Part {
 
 const PARTS: Part[] = [
   {
-    title: 'Dónde estás',
-    subtitle: 'Preguntas 1–3',
+    title: 'Where You Are',
+    subtitle: 'Questions 1–3',
     items: [
       {
         id: 'q1', n: '01',
-        text: '¿En qué área de tu vida sientes más estancamiento, pesadez o repetición en este momento?',
-        hint: 'Salud / dinero / relaciones / propósito / trabajo / autoconfianza — sé específico/a.',
+        text: 'In which area of your life do you feel the most stagnation, heaviness, or repetition right now?',
+        hint: 'Health / money / relationships / purpose / work / self-trust — be specific.',
         type: 'text',
       },
       {
         id: 'q2', n: '02',
-        text: '¿Qué problema sigue apareciendo sin importar cuánto trabajo hagas en ti mismo/a?',
-        hint: 'El loop que sigue corriendo. El mecanismo del que estás cansado/a.',
+        text: 'What problem keeps reappearing no matter how much work you do on yourself?',
+        hint: 'The loop that keeps running. The mechanism you\'re tired of.',
         type: 'text',
       },
       {
         id: 'q3', n: '03',
-        text: 'Si tu vida siguiera exactamente igual durante los próximos 5 años, ¿qué es lo que más te asusta?',
-        hint: 'Responde desde el instinto, no desde la mente.',
+        text: 'If your life stayed exactly the same for the next 5 years, what scares you most?',
+        hint: 'Answer from the gut, not the mind.',
         type: 'text',
       },
     ],
   },
   {
-    title: 'Cómo te detienes',
-    subtitle: 'Preguntas 4–7',
+    title: 'How You Stop Yourself',
+    subtitle: 'Questions 4–7',
     items: [
       {
         id: 'q4', n: '04',
-        text: 'Cuando se requiere crecimiento o cambio, ¿cómo tiendes a evitarlo?',
-        hint: 'Procrastinación / distracción / sobre-planificar / mantenerse ocupado/a / entumecerse / controlar.',
+        text: 'When growth or change is required, how do you tend to avoid it?',
+        hint: 'Procrastination / distraction / over-planning / staying busy / numbing / controlling.',
         type: 'text',
       },
       {
         id: 'q5', n: '05',
-        text: '¿Qué empiezas con entusiasmo y luego abandonas?',
-        hint: 'Sé específico/a. Nombra algo real.',
+        text: 'What do you start with enthusiasm and then abandon?',
+        hint: 'Be specific. Name something real.',
         type: 'text',
       },
       {
         id: 'q6', n: '06',
-        text: '¿Qué compromiso contigo mismo/a sigues rompiendo, una y otra vez?',
-        hint: 'No con otros — contigo.',
+        text: 'What commitment to yourself do you keep breaking, over and over?',
+        hint: 'Not to others — to yourself.',
         type: 'text',
       },
       {
         id: 'q7', n: '07',
-        text: '¿Qué has intentado ya para resolver esto? ¿Qué pasó?',
-        hint: 'Lista 2–3 intentos específicos. Qué funcionó brevemente — y qué falló completamente.',
+        text: 'What have you already tried to solve this? What happened?',
+        hint: 'List 2–3 specific attempts. What worked briefly — and what failed completely.',
         type: 'text',
       },
     ],
   },
   {
-    title: 'La identidad debajo',
-    subtitle: 'Preguntas 8–10',
+    title: 'The Identity Underneath',
+    subtitle: 'Questions 8–10',
     items: [
       {
         id: 'q8', n: '08',
-        text: '¿Qué parte de tu identidad actual tendría que cambiar — o desaparecer — para que pudieras llegar al siguiente nivel?',
-        hint: '¿Qué versión de ti tendría que morir?',
+        text: 'What part of your current identity would have to change — or disappear — for you to reach the next level?',
+        hint: 'What version of you would need to die?',
         type: 'text',
       },
       {
         id: 'q9', n: '09',
-        text: '¿Qué miedo te parece "irracional", pero aún así controla decisiones importantes?',
-        hint: 'El que sabes que no tiene sentido, pero actúa de todas formas.',
+        text: 'What fear feels "irrational" to you, yet still controls important decisions?',
+        hint: 'The one you know doesn\'t make sense but acts anyway.',
         type: 'text',
       },
       {
         id: 'q10', n: '10',
-        text: '¿Qué rol tiendes a repetir en la vida — en el trabajo, relaciones y desafíos?',
-        hint: 'Víctima / rescatador/a / sobre-logrador/a / complaciente / evasivo/a / rebelde / el que sostiene todo.',
+        text: 'What role do you tend to repeat in life — in work, relationships, and challenges?',
+        hint: 'Victim / rescuer / over-achiever / people-pleaser / avoider / rebel / the one who holds it all together.',
         type: 'text',
       },
     ],
   },
   {
-    title: 'La señal del cuerpo',
-    subtitle: 'Preguntas 11–12',
+    title: "Your Body's Signal",
+    subtitle: 'Questions 11–12',
     items: [
       {
         id: 'q11', n: '11',
-        text: '¿Cómo responde tu cuerpo cuando estás a punto de crecer, ser visto/a, o dar un paso significativo?',
-        hint: 'Describe la sensación física — no la interpretes, solo descríbela.',
+        text: "How does your body respond when you're about to grow, be seen, or take a significant step?",
+        hint: 'Describe the physical sensation — don\'t interpret it, just describe it.',
         type: 'text',
       },
       {
         id: 'q12', n: '12',
-        text: '¿Qué sensación o estado sobrepassas habitualmente para seguir funcionando?',
-        hint: 'Fatiga / emociones / necesidades / incomodidad — ¿qué ignorás para "seguir adelante"?',
+        text: 'What sensation or state do you habitually override to keep functioning?',
+        hint: 'Fatigue / emotions / needs / discomfort — what do you push past to "keep going"?',
         type: 'text',
       },
     ],
   },
   {
-    title: 'Lo que ya sabes',
-    subtitle: 'Preguntas 13–15',
+    title: 'What You Already Know',
+    subtitle: 'Questions 13–15',
     items: [
       {
         id: 'q13', n: '13',
-        text: '¿Qué verdad sobre ti mismo/a estás cansado/a de saber pero no de actuar en consecuencia?',
-        hint: 'La que ya escuchaste antes. La que siempre está ahí.',
+        text: 'What truth about yourself are you tired of knowing but not acting on?',
+        hint: "The one you've heard before. The one that's always there.",
         type: 'text',
       },
       {
         id: 'q14', n: '14',
-        text: '¿Qué parte de esta evaluación ya quisiste saltarte o apresurarte?',
+        text: 'Which part of this assessment did you already want to skip or rush through?',
         hint: null,
         type: 'text',
       },
       {
         id: 'q15', n: '15',
-        text: '¿Qué cambiaría en tu vida diaria si dejaras de culpar las circunstancias, el tiempo o a otras personas?',
-        hint: 'Una cosa específica.',
+        text: 'What would change in your daily life if you stopped blaming circumstances, timing, or other people?',
+        hint: 'One specific thing.',
         type: 'text',
       },
     ],
   },
   {
-    title: 'Tu disposición',
-    subtitle: 'Preguntas 16–18',
+    title: 'Your Readiness',
+    subtitle: 'Questions 16–18',
     items: [
       {
         id: 'q16', n: '16',
-        text: 'Ahora mismo, ¿estás más apegado/a a la comodidad o a la coherencia?',
-        hint: 'Sé honesto/a. No hay respuesta incorrecta — solo una precisa.',
+        text: 'Right now, are you more attached to comfort or to coherence?',
+        hint: 'Be honest. There is no wrong answer — only an accurate one.',
         type: 'text',
       },
       {
         id: 'q17', n: '17',
-        text: '¿Qué hábitos o bucles mantienen tu energía baja, dispersa o inconsistente?',
-        hint: 'Nombra al menos 2 específicos.',
+        text: 'What habits or loops are keeping your energy low, scattered, or inconsistent?',
+        hint: 'Name at least 2 specific ones.',
         type: 'text',
       },
       {
         id: 'q18', n: '18',
-        text: '¿Por qué debe cambiar esto ahora — no en 6 meses, no "eventualmente"?',
-        hint: '¿Qué te está costando realmente? Sé específico/a.',
+        text: 'Why must this change now — not in 6 months, not "eventually"?',
+        hint: 'What is it actually costing you? Be specific.',
         type: 'text',
       },
     ],
   },
   {
-    title: 'Tu horizonte',
-    subtitle: 'Preguntas 19–21',
+    title: 'Your Timeline',
+    subtitle: 'Questions 19–21',
     items: [
       {
         id: 'q19', n: '19',
-        text: '¿Cuánto tiempo lleva presente en tu vida el mecanismo de ejecución principal que identificaste?',
+        text: 'How long has the main execution mechanism you identified been present in your life?',
         hint: null,
         type: 'radio',
-        options: ['Menos de 1 año', '1–3 años', '3–10 años', 'Más de 10 años'],
+        options: ['Less than 1 year', '1–3 years', '3–10 years', 'More than 10 years'],
       },
       {
         id: 'q20', n: '20',
-        text: '¿Cuántas áreas de tu vida afecta?',
+        text: 'How many areas of your life does it affect?',
         hint: null,
         type: 'radio',
-        options: ['1 área', '2–3 áreas', 'La mayoría de las áreas', 'Todas las áreas'],
+        options: ['1 area', '2–3 areas', 'Most areas', 'All areas'],
       },
       {
         id: 'q21', n: '21',
-        text: 'Basándote en todo lo que respondiste: ¿qué nivel de apoyo necesitas realmente en este momento?',
+        text: 'Based on everything you\'ve answered: what level of support do you actually need right now?',
         hint: null,
         type: 'radio',
         options: [
-          'Necesito claridad primero',
-          'Necesito un sistema estructurado',
-          'Necesito responsabilidad + coaching',
-          'Necesito transformación profunda',
+          'I need clarity first',
+          'I need a structured system',
+          'I need accountability + coaching',
+          'I need deep transformation',
         ],
       },
     ],
@@ -205,16 +205,14 @@ const TOTAL_PARTS = PARTS.length;
 function validateStep(step: number, answers: Answers, name: string, email: string): string[] {
   const errs: string[] = [];
   if (step === 0) {
-    if (!name.trim()) errs.push('Por favor ingresa tu nombre.');
-    if (!email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errs.push('Por favor ingresa un email válido.');
+    if (!name.trim()) errs.push('Please enter your name.');
+    if (!email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errs.push('Please enter a valid email address.');
     return errs;
   }
   const part = PARTS[step - 1];
   if (!part) return errs;
   for (const q of part.items) {
-    if (!answers[q.id]?.trim()) {
-      errs.push(`Completa la pregunta ${q.n}.`);
-    }
+    if (!answers[q.id]?.trim()) errs.push(`Complete question ${q.n}.`);
   }
   return errs;
 }
@@ -289,19 +287,18 @@ export default function AssessmentClient() {
   const isLastPart = step === TOTAL_PARTS;
   const progress = step >= 1 && step <= TOTAL_PARTS ? (step / TOTAL_PARTS) * 100 : step > TOTAL_PARTS ? 100 : 0;
 
-  // No tier guard
   if (!tier) {
     return (
       <main className="assess-main">
         <div ref={topRef} />
         <div className="assess-wrap" style={{ textAlign: 'center', paddingTop: '140px' }}>
-          <span className="eyebrow" style={{ justifyContent: 'center' }}>Acceso requerido</span>
-          <h1 className="sec-title" style={{ marginBottom: '20px' }}>Acceso no encontrado</h1>
+          <span className="eyebrow" style={{ justifyContent: 'center' }}>Access Required</span>
+          <h1 className="sec-title" style={{ marginBottom: '20px' }}>Assessment Access</h1>
           <p className="sec-sub" style={{ margin: '0 auto 36px' }}>
-            Para completar tu evaluación, necesitas haber adquirido el Identity Audit Protocol primero.
+            To complete your assessment, you need to have purchased the Identity Audit Protocol first.
           </p>
           <a href="/" className="btn btn-solid btn-lg">
-            <span>Ver el protocolo</span>
+            <span>View the Protocol</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="arr"><polyline points="9 18 15 12 9 6" /></svg>
           </a>
         </div>
@@ -313,13 +310,12 @@ export default function AssessmentClient() {
     <main className="assess-main">
       <div ref={topRef} style={{ position: 'absolute', top: 0 }} />
 
-      {/* Progress bar — visible on steps 1–7 */}
       {step >= 1 && step <= TOTAL_PARTS && (
         <div className="assess-progress-wrap">
           <div className="assess-progress">
             <div className="assess-progress-bar" style={{ width: `${progress}%` }} />
           </div>
-          <span className="assess-progress-label">Parte {step} de {TOTAL_PARTS}</span>
+          <span className="assess-progress-label">Part {step} of {TOTAL_PARTS}</span>
         </div>
       )}
 
@@ -338,52 +334,54 @@ export default function AssessmentClient() {
               <span className="eyebrow" style={{ justifyContent: 'center' }}>
                 {tier === 'vip' ? 'Identity Integration Protocol — VIP' : 'Identity Audit Protocol — Standard'}
               </span>
-              <h1 className="assess-h1">Evaluación de Identidad</h1>
+              <h1 className="assess-h1">Identity Assessment</h1>
               <p className="assess-lead">
-                Lo que estás a punto de completar no es un test de personalidad.<br />
-                Es un mapa de los mecanismos internos que determinan lo que puedes y no puedes ejecutar.
+                What you are about to complete is not a personality test.<br />
+                It is a map of the internal mechanisms that determine what you can and cannot execute.
               </p>
             </div>
 
             <div className="assess-intro-rules">
               <div className="assess-rule-item">
                 <span className="assess-rule-n">01</span>
-                <span className="assess-rule-text">Responde desde lo que es verdad, no desde lo que suena bien.</span>
+                <span className="assess-rule-text">Answer from what is true, not from what sounds good.</span>
               </div>
               <div className="assess-rule-item">
                 <span className="assess-rule-n">02</span>
-                <span className="assess-rule-text">No hay respuestas correctas. Solo respuestas honestas.</span>
+                <span className="assess-rule-text">There are no right answers. Only honest ones.</span>
               </div>
               <div className="assess-rule-item">
                 <span className="assess-rule-n">03</span>
-                <span className="assess-rule-text">Tómate el tiempo que necesites. La velocidad no es la meta.</span>
+                <span className="assess-rule-text">Take as much time as you need. Speed is not the goal.</span>
               </div>
               <div className="assess-rule-item">
                 <span className="assess-rule-n">04</span>
-                <span className="assess-rule-text">Recibirás tu análisis {tier === 'vip' ? 'en 24 horas' : 'en 48 horas'} en tu email.</span>
+                <span className="assess-rule-text">
+                  You will receive your analysis {tier === 'vip' ? 'within 24 hours' : 'within 48 hours'} to your email.
+                </span>
               </div>
             </div>
 
             <div className="assess-user-fields">
               <div className="assess-field-group">
-                <label className="assess-label" htmlFor="assess-name">Tu nombre</label>
+                <label className="assess-label" htmlFor="assess-name">Your name</label>
                 <input
                   id="assess-name"
                   type="text"
                   className="assess-input"
-                  placeholder="¿Cómo te llamás?"
+                  placeholder="What's your name?"
                   value={name}
                   onChange={e => { setName(e.target.value); if (errors.length) setErrors([]); }}
                   autoComplete="given-name"
                 />
               </div>
               <div className="assess-field-group">
-                <label className="assess-label" htmlFor="assess-email">Tu email</label>
+                <label className="assess-label" htmlFor="assess-email">Your email</label>
                 <input
                   id="assess-email"
                   type="email"
                   className="assess-input"
-                  placeholder="Aquí recibirás tu análisis"
+                  placeholder="This is where you'll receive your analysis"
                   value={email}
                   onChange={e => { setEmail(e.target.value); if (errors.length) setErrors([]); }}
                   autoComplete="email"
@@ -399,7 +397,7 @@ export default function AssessmentClient() {
 
             <div className="assess-nav assess-nav-right">
               <button className="btn btn-solid btn-lg" onClick={goNext}>
-                <span>Comenzar la evaluación</span>
+                <span>Begin Assessment</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="arr"><polyline points="9 18 15 12 9 6" /></svg>
               </button>
             </div>
@@ -433,7 +431,7 @@ export default function AssessmentClient() {
                           e.target.style.height = 'auto';
                           e.target.style.height = `${e.target.scrollHeight}px`;
                         }}
-                        placeholder="Escribe aquí…"
+                        placeholder="Write here…"
                       />
                     )}
 
@@ -471,16 +469,16 @@ export default function AssessmentClient() {
               <div className="assess-nav">
                 <button className="btn" onClick={goBack}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="arr"><polyline points="15 18 9 12 15 6" /></svg>
-                  <span>Atrás</span>
+                  <span>Back</span>
                 </button>
                 {isLastPart ? (
                   <button className="btn btn-solid btn-lg" onClick={handleSubmit}>
-                    <span>Enviar evaluación</span>
+                    <span>Submit Assessment</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="arr"><polyline points="9 18 15 12 9 6" /></svg>
                   </button>
                 ) : (
                   <button className="btn btn-solid btn-lg" onClick={goNext}>
-                    <span>Continuar</span>
+                    <span>Continue</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="arr"><polyline points="9 18 15 12 9 6" /></svg>
                   </button>
                 )}
@@ -493,7 +491,7 @@ export default function AssessmentClient() {
         {step === 8 && (
           <div className="assess-step assess-state-center">
             <div className="assess-spinner" />
-            <p className="assess-state-text">Enviando tu evaluación…</p>
+            <p className="assess-state-text">Submitting your assessment…</p>
           </div>
         )}
 
@@ -503,15 +501,15 @@ export default function AssessmentClient() {
             <div className="assess-success-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
             </div>
-            <span className="eyebrow" style={{ justifyContent: 'center' }}>Evaluación recibida</span>
-            <h2 className="assess-h1" style={{ fontSize: 'clamp(24px, 3.5vw, 38px)' }}>Tu análisis está en proceso</h2>
+            <span className="eyebrow" style={{ justifyContent: 'center' }}>Assessment Received</span>
+            <h2 className="assess-h1" style={{ fontSize: 'clamp(24px, 3.5vw, 38px)' }}>Your analysis is in progress</h2>
             <p className="assess-lead" style={{ maxWidth: '460px', margin: '0 auto 16px' }}>
               {tier === 'vip'
-                ? 'Recibirás tu análisis de identidad completo en las próximas 24 horas. Tu sesión de integración será coordinada por separado.'
-                : 'Recibirás tu análisis de identidad completo en las próximas 48 horas en el email que ingresaste.'}
+                ? 'You will receive your complete identity analysis within 24 hours. Your integration session will be coordinated separately.'
+                : 'You will receive your complete identity analysis within 48 hours to the email you entered.'}
             </p>
             <p className="assess-hint-text" style={{ textAlign: 'center' }}>
-              Revisá tu carpeta de spam si no lo ves llegar.
+              Check your spam folder if you don't see it arrive.
             </p>
           </div>
         )}
@@ -522,19 +520,19 @@ export default function AssessmentClient() {
             <div className="assess-error-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /><circle cx="12" cy="12" r="10" /></svg>
             </div>
-            <h2 className="assess-h1" style={{ fontSize: 'clamp(22px, 3vw, 34px)' }}>Algo salió mal</h2>
+            <h2 className="assess-h1" style={{ fontSize: 'clamp(22px, 3vw, 34px)' }}>Something went wrong</h2>
             <p className="assess-lead" style={{ maxWidth: '440px', margin: '0 auto 32px' }}>
-              No pudimos enviar tu evaluación. Por favor contáctanos en{' '}
+              We couldn&apos;t submit your assessment. Please contact us at{' '}
               <a href="mailto:soyconscienciaelevada@gmail.com" style={{ color: 'var(--acc)' }}>
                 soyconscienciaelevada@gmail.com
               </a>{' '}
-              y la procesamos manualmente.
+              and we&apos;ll process it manually.
             </p>
             <button
               className="btn btn-solid"
               onClick={() => { setSubmitState('idle'); transition(TOTAL_PARTS); }}
             >
-              <span>Intentar de nuevo</span>
+              <span>Try Again</span>
             </button>
           </div>
         )}
