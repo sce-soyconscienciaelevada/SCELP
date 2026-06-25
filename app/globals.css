@@ -148,7 +148,7 @@ nav.scrolled {
 [data-theme="light"] .btn-solid::before { background: rgba(0,0,0,.22); }
 .btn-solid:hover { color: var(--bg); }
 .btn-solid .arr { color: var(--bg); opacity: .7; }
-.btn-lg { padding: 14px 26px; font-size: 13px; }
+.btn-lg { padding: 14px 26px; font-size: 13px; min-height: 44px; }
 
 /* ── SHARED SECTION ELEMENTS ────────────────────────────────── */
 section { position: relative; z-index: 2; }

@@ -47,7 +47,9 @@ export default function Page() {
           {/* Right: copy */}
           <div>
             <div className="eyebrow eyebrow-left rv">Identity Audit Protocol</div>
-            <h1 className="hero-h1" id="hero-h1" />
+            <h1 className="hero-h1" id="hero-h1">
+              Most people don&apos;t have a discipline problem. They have an identity problem.
+            </h1>
             <p className="hero-lead rv rv-d3">
               20 structured questions. One personalized diagnostic report. The exact mechanism
               driving your execution failures — identified, mapped, and linked to a clear direction.
