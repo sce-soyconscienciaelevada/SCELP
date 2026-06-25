@@ -16,4 +16,11 @@ Allow: /
 User-agent: GoogleBot
 Allow: /
 
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Sourcekit
+Allow: /
+
 Sitemap: https://sce-identity-audit.vercel.app/sitemap.xml
+
