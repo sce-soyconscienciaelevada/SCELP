@@ -18,14 +18,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Identity Audit Protocol — Soy Consciencia Elevada',
+  title: 'The Identity Audit Protocol — Soy Consciencia Elevada',
   description:
-    '20-question diagnostic that names the exact identity mechanism blocking your execution. Personalized report delivered to your inbox. $37 — 7-day full refund.',
+    '20-question diagnostic that names the identity mechanism blocking your execution. Personalized report. $37 — 7-day full refund.',
   alternates: {
     canonical: 'https://sce-identity-audit.vercel.app/',
   },
   openGraph: {
-    title: 'Identity Audit Protocol — Soy Consciencia Elevada',
+    title: 'The Identity Audit Protocol — Soy Consciencia Elevada',
     description:
       '20 structured questions. One personalized diagnostic report. The exact mechanism driving your execution failures — identified, mapped, and linked to a clear direction.',
     type: 'website',
